@@ -9,7 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      height: 170,
+      height: 250,
       weight: 65,
       bmi: 22.49,
       bmiClass: "normal"
@@ -69,14 +69,14 @@ class App extends Component {
           <div className="form-group">
             <label htmlFor="">Height</label>
             <Range
-              value={this.props.height}
+              value={this.state.height}
               onChange={this.heightChange.bind(this)}
             />
           </div>
           <div className="form-group">
             <label htmlFor="">Weight</label>
             <Range
-              value={this.props.weight}
+              value={this.state.weight}
               onChange={this.weightChange.bind(this)}
             />
           </div>
