@@ -99,7 +99,7 @@ input[type=range]::-webkit-slider-runnable-track {
 
 .form-group label{
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 20px;
 }
 
 .form-range{
@@ -116,15 +116,23 @@ input[type=range]::-webkit-slider-runnable-track {
   margin: 0px auto 30px auto;
   border-bottom: 1px solid #393532;
   width: 20%;
+  font-size: 25px;
 }
 
 .output-group{
   margin-bottom: 10px;
-  font-size: 1.2em;
+  font-size: 20px;
 }
 
 .output-group span{
   margin-right: 5px;
-  font-size: 1.2em;
+  font-size: 20px;
   font-weight: 700;
+}
+
+@media(max-width: 800px){
+  .output-title,
+  .form-group{
+    width: 90%;
+  }
 }
