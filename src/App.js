@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 
+import Header from "./components/Header";
 import Range from "./components/Range";
 import Output from "./components/Output";
 
@@ -58,23 +59,24 @@ class App extends Component {
       bmiClass: this.getBmiClass(bmi)
     });
   }
-
   render() {
     return (
-      <div className="App">
-        <h1>BMI calculator</h1>
-        <form action="">
-          <div>
+      <div className="wrap">
+        <Header />
+        <form className="form">
+          <h2 className="output-title">Input data</h2>
+
+          <div className="form-group">
             <label htmlFor="">Height</label>
             <Range
-              value={this.state.height}
+              value={this.props.height}
               onChange={this.heightChange.bind(this)}
             />
           </div>
-          <div>
+          <div className="form-group">
             <label htmlFor="">Weight</label>
             <Range
-              value={this.state.weight}
+              value={this.props.weight}
               onChange={this.weightChange.bind(this)}
             />
           </div>

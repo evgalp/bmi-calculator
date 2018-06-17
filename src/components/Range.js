@@ -6,12 +6,11 @@ export default class Range extends Component {
     this.state = {
       value: props.value
     };
-    this.onChange = this.onChange.bind(this);
   }
 
   static defaultProps = {
-    min: 0,
-    max: 245,
+    min: 1,
+    max: 250,
     step: 1
   };
 
@@ -31,7 +30,7 @@ export default class Range extends Component {
           min={this.props.min}
           step={this.props.step}
           max={this.props.max}
-          onChange={this.onChange}
+          onChange={this.onChange.bind(this)}
         />
       </div>
     );
